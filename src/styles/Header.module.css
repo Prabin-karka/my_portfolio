@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* Wrapper for Header */
+.header_section {
+  position: relative;
+  background-color: #e6e7e8;
+  overflow: hidden;
+}
+
+/* Hero Content */
+.subMain1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 8rem 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+.image img {
+  width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+
+.subMain2 {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; /* Ensures all child elements align at the start */
+}
+
+
+.greeting {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-size: 3rem;
+  padding: 0 0.3rem;
+  border-radius: 0.25rem;
+}
+
+.marker {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  }
+.marker img {
+  margin-left: auto;
+}
+
+
+
+.role {
+  font-size: 1.2rem;
+  color: #374151;
+}
+
+.accessContact button {
+ 
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background-color: #facc15;
+  font-weight: 600;
+  border-radius: 99px;
+  cursor: pointer;
+}
+
+.accessContact button:hover {
+  transition: transform 0.18s ease-in-out;
+  background-color: #fada58;
+  transform: translateY(-3px);
+}
+
+.social_icons {
+  margin: 1.2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social_icons a {
+  color: #333;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social_icons a:hover {
+  color: #636262;
+}
+
+/* Wave Image Styling */
+.wave_wrapper {
+  width: 100%;
+  height: 200px; /* adjust as needed */
+  background: url("../assets/wave2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+ 
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .image img {
+    width: 200px;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+  .subMain1{
+    padding: 5rem 2rem;
+  }
+  .wave_wrapper{
+    height: 100px;
+  }
+}

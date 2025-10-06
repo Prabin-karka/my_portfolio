@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+   html, body {
+  overflow-x: hidden;
+}
+  .scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 2px;
+    /* for circle button from*/
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    /* to */
+    /* inside arrow size */
+    font-size: 15px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .scroll-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #555;
+  }
+  

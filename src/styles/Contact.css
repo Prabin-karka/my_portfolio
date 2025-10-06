@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+   html, body {
+  overflow-x: hidden;
+}
+  .contact-section {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+  .marker {
+  width: 100%;            
+  display: flex;          
+  justify-content: center;
+  margin-top: 0.5rem; 
+  margin-bottom: 2rem;
+}
+
+.contact-wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1 1 300px;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 50%;
+}
+
+.contact-form {
+  background-color: #f5f7fa;
+}
+
+.contact-info {
+  padding: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none; /* Remove default blue glow */
+  border: 2px solid #f7e59e; 
+  box-shadow: 0 0 10px #fbdb5c; 
+}
+
+
+.contact-form button {
+  background-color: #fdd835;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-info h3 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  margin: 1rem 0;
+  line-height: 2rem;
+}
+
+.contact-info a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+
+/* Responsive styles for mobile */
+@media (max-width: 767px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-form,
+  .contact-info {
+    width: 100%;
+    max-width: 100%;
+    margin: 2rem 0;
+    padding: 1.5rem;
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 0.65rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .contact-info p {
+    font-size: 0.95rem;
+    line-height: 1.6rem;
+  }
+}

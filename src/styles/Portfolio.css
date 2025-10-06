@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.portfolio-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+.marker {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 150px;
+  gap: 15px;
+}
+
+/* Control the layout with specific grid positions */
+.portfolio-item:nth-child(6) {
+  grid-row: span 1;
+}
+
+.portfolio-item:nth-child(2) {
+  grid-row: span 2;
+}
+
+.portfolio-item:nth-child(3) {
+  grid-row: span 1;
+}
+
+.portfolio-item:nth-child(4) {
+  grid-row: span 2;
+}
+
+.portfolio-item:nth-child(5) {
+  grid-row: span 2;
+}
+
+.portfolio-item:nth-child(7) {
+  grid-row: span 1;
+}
+
+.portfolio-item:nth-child(6) {
+  grid-row: span 2;
+}
+
+.portfolio-item:nth-child(8) {
+  grid-row: span 1;
+}
+
+.portfolio-item {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease; /* optional zoom effect */
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05); /* slight zoom on hover */
+}
+
+.portfolio-item .overlay {
+  position: absolute;
+  bottom: -100%; /* Start hidden below */
+  background: rgba(255, 255, 255, 0.8);
+  color: rgb(0, 0, 0);
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0;
+  transition: bottom 0.5s ease, opacity 0.5s ease;
+}
+
+.portfolio-item:hover .overlay {
+  bottom: 0; /* Moves up */
+  opacity: 1;
+}
+span{
+  color: rgb(114, 114, 114);
+}
+
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}

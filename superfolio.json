@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": 1001,
+      "email": "user@gmail.com",
+      "password": "user123",
+      "fullName": "Demo User",
+      "avatar": "https://i.pravatar.cc/150?img=1",
+      "lastLogin": "",
+      "accountCreated": "2024-01-15T10:30:00Z",
+      "isVerified": true,
+      "roles": ["user"]
+    },
+    {
+      "id": 1002,
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "fullName": "Admin User",
+      "avatar": "https://i.pravatar.cc/150?img=2",
+      "lastLogin": "",
+      "accountCreated": "2024-01-10T08:15:00Z",
+      "isVerified": true,
+      "roles": ["admin", "user"]
+    }
+  ]
+}
