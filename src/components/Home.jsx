@@ -3,14 +3,14 @@ import '../styles/Home.css'
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import About from "../components/About";
-import Services from "../components/Services";
+// import Services from "../components/Services";
 import Myskill from "../components/Myskill";
 import Portfolio from "../components/Portfolio";
 import Experience from "../components/Experience";
-import Testimonials from "../components/Testimonials";
+// import Testimonials from "../components/Testimonials";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import Login from "../components/Login";
+// import Login from "../components/Login";
 import { useNavigate } from "react-router-dom";
 import ScrollToTopButton from "../components/ScrollToTopButton"; // adjust path
 
@@ -70,9 +70,9 @@ const Home = () => {
       <div id="about">
         <About />
       </div>
-      <div id="services">
+      {/* <div id="services">
         <Services />
-      </div>
+      </div> */}
       <div id="myskill">
         <Myskill />
       </div>
@@ -82,9 +82,9 @@ const Home = () => {
       <div id="experience">
         <Experience />
       </div>
-      <div id="testimonials">
+      {/* <div id="testimonials">
         <Testimonials />
-      </div>
+      </div> */}
       <div id="contact">
         <Contact />
       </div>

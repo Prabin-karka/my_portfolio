@@ -13,24 +13,24 @@ const experiences = [
     years: "2012–2014",
     icon: uiUxIcon,
   },
-  {
-    title: "App Development",
-    company: "MakeMyApp LLC",
-    years: "2015–2018",
-    icon: appDevelopmentIcon,
-  },
-  {
-    title: "Web Design",
-    company: "Webbie LLC",
-    years: "2018–2020",
-    icon: webDesignIcon,
-  },
-  {
-    title: "Full Stack Development",
-    company: "Coder Inc.",
-    years: "2020–2021",
-    icon: fullStackIcon,
-  },
+  // {
+  //   title: "App Development",
+  //   company: "MakeMyApp LLC",
+  //   years: "2015–2018",
+  //   icon: appDevelopmentIcon,
+  // },
+  // {
+  //   title: "Web Design",
+  //   company: "Webbie LLC",
+  //   years: "2018–2020",
+  //   icon: webDesignIcon,
+  // },
+  // {
+  //   title: "Full Stack Development",
+  //   company: "Coder Inc.",
+  //   years: "2020–2021",
+  //   icon: fullStackIcon,
+  // },
 ];
 
 const Experience = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/About.css';
-import profileImage from '../assets/img2.jpg';
+import profileImage from '../assets/It profile.jpg';
 
 const About = () => {
   return (
@@ -33,7 +33,7 @@ const About = () => {
         </div>
 
         <div className="about-image fade-in-right">
-          <img src={""} alt="profile_img" />
+          <img src={profileImage} alt="profile_img" />
         </div>
       </div>
     </section>
