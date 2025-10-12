@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
   }
    html, body {
   overflow-x: hidden;
@@ -18,6 +19,30 @@
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
   }
+ .na {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  color: #111;
+}
+
+.na::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: -5px;
+  background-color: #edd25c;
+  transition: 0.3s;
+}
+
+.na:hover::after {
+  width: 100%;
+}
+
   
   .footer p {
     margin: 01.5rem 0;

@@ -37,7 +37,7 @@
 
 
 .about-text p {
-  font-size: 1.05rem;
+  font-size: 18px;
   line-height: 1.7;
   margin-bottom: 1.5rem;
   color: #374151;
@@ -59,8 +59,11 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  min-width: 250px;
+  align-items: center;
+  min-width: 100px; /* reduce from 150px */
+  max-width: 450px; /* optional */
 }
+
 
 .about-image img {
   max-width: 70%;
@@ -68,12 +71,7 @@
   height: 70%;
   object-fit: cover;
 }
-.about-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  min-width: 150px;
-}
+
 .animated-heading {
   font-size: 2rem;
   font-weight: bold;
@@ -103,11 +101,13 @@
 }
 
 .text-one {
+  padding-top: 6px;
   animation: typing1 7s steps(11) infinite;
   color:#f59e0b;
 }
 
 .text-two {
+  padding-top: 6px;
   animation: typing2 7s steps(17) infinite;
   color: #ef4444;
 }

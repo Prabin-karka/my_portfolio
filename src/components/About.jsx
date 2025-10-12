@@ -15,12 +15,9 @@ const About = () => {
           </h2>
 
           <p>
-            I am an aspiring Front-End Developer with a Master’s degree in Mathematics and a growing passion for web development.
-            I have built strong skills in React.js, JavaScript, HTML, CSS, and Material-UI, and I focus on creating responsive
-            and accessible user interfaces. During my front-end internship at Alo Info-Tech, Nagercoil,
-            I contributed to two web projects by designing and implementing UI layouts. I translate design requirements
-            into functional code, collaborate effectively with teams, and consistently seek opportunities to learn new technologies.
-            I am eager to work on innovative projects and continue growing as a developer in a dynamic tech environment.
+            I am an aspiring Front-End Developer with a Master’s degree in Mathematics and a growing passion for web development.I have built strong skills in HTML, CSS, Bootstrap, Material-UI, JavaScript, React.js, and Firebase, and I focus on creating responsive
+            and accessible user interfaces. During my front-end internship at Alo Info-Tech, Nagercoil, I contributed to two web projects by designing and implementing UI layouts. I translate design requirements
+            into functional code, collaborate effectively with teams, and consistently seek opportunities to learn new technologies.I am eager to work on innovative projects and continue growing as a developer in a dynamic tech environment.
           </p>
 
           <div className="info-list">

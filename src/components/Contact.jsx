@@ -68,11 +68,11 @@ const Contact = () => {
     setLoading(true);
     try {
       await axios.post(`${FIREBASE_DB_URL}/contacts.json`, formData);
-      alert('Message sent successfully!');
+      alert('Your message just made my day 😊 I’ll reply shortly.');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       console.error('Error sending message:', error);
-      alert('Something went wrong. Try again!');
+      alert('Something went wrong😓. Try again!');
     }
     setLoading(false);
   };
@@ -92,7 +92,7 @@ const Contact = () => {
             <input
               type="text"
               name="name"
-              placeholder="Your Name"
+              placeholder="Your name, so I know who to reply to 😊"
               value={formData.name}
               onChange={handleChange}
             />
@@ -101,7 +101,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              placeholder="Your Email"
+              placeholder="Your email, so I can get back to you"
               value={formData.email}
               onChange={handleChange}
             />
@@ -109,7 +109,7 @@ const Contact = () => {
             <label>Message</label>
             <textarea
               name="message"
-              placeholder="Your Message"
+              placeholder="Write your message here… I’m excited to read it!"
               value={formData.message}
               onChange={handleChange}
             ></textarea>
@@ -120,13 +120,13 @@ const Contact = () => {
           </div>
 
           <div className="contact-info fade-in-scale">
-            <h3>Let’s talk how I can help you!</h3>
-            <p>If you like my work and want to avail my services then drop me a message using the contact form.</p>
-            <p>Or get in touch using my email or my contact number.</p>
-            <p>See you!</p>
+            <h3>Drop Me a Message❤️</h3>
+            <h3>Your message could spark something amazing. Don’t hesitate to reach out.</h3>
+            <p>(Your message means a lot! It’s safely stored and will reach me through Firebase, so I can read it and get back to you as soon as possible. Thank you for taking the time to connect — I truly appreciate it!)</p>
+           
 
-            <p><strong>Email:</strong> <a href="mailto:r.rajaprabinraj@gmail.com">r.rajaprabinraj@gmail.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+91-9487082294">+91 9487082294</a></p>
+            <h3><strong>Email:</strong> <a href="mailto:r.rajaprabinraj@gmail.com">r.rajaprabinraj@gmail.com</a></h3>
+            <h3><strong>Phone:</strong> <a href="tel:+91-9487082294">+91 9487082294</a></h3>
           </div>
         </div>
 

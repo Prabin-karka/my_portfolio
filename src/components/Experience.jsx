@@ -1,17 +1,17 @@
 import React from 'react';
 import '../styles/Experience.css';
 import appDevelopmentIcon from '../assets/app-development.png'
-import uiUxIcon from '../assets/ui-ux.png'
+import reacticon from '../assets/react.png'
 import webDesignIcon from '../assets/web-design.png'
 import fullStackIcon from '../assets/full-stack.svg'
 import marker from '../assets/marker.svg'
 
 const experiences = [
   {
-    title: "UI/UX Design",
-    company: "Designerr Inc.",
-    years: "2012–2014",
-    icon: uiUxIcon,
+    title: "React Developer",
+    company: "Alo Info tech",
+    Duration: "3 months",
+    icon: reacticon,
   },
   // {
   //   title: "App Development",
@@ -36,7 +36,7 @@ const experiences = [
 const Experience = () => {
   return (
     <section className="experience">
-      <h2 className="experience-title">Experience</h2>
+      <h2 className="experience-title">Internship</h2>
       <div className="marker">
         <img src={marker} alt="marker img" />
       </div>
@@ -47,19 +47,16 @@ const Experience = () => {
                     <div>
                     <h3>{exp.title}</h3>
                     <p className="experience-company">
-                    {exp.company} <span>({exp.years})</span>
+                    {exp.company} <span>({exp.Duration})</span>
                     </p>
                     </div>
                     <img src={exp.icon} alt={`${exp.title} icon`} className="experience-icon-img" />
                   </div>
             <div className="experience-card-bottom">
               <p>
-                Leverage agile frameworks to provide a robust synopsis for high level overviews.
-                Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
-              </p>
+               Worked on multiple web development projects with a strong focus on UI design and layout using HTML and CSS. Developed responsive and accessible front-end components in a React.js environment, collaborating closely with the team to implement design specifications and enhance overall user experience.</p>
               <p>
-                Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-              </p>
+               Encourage a broad and innovative perspective by promoting workplace diversity and empowering teams to drive meaningful change.</p>
             </div>
           </div>
         ))}

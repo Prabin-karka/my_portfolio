@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImage from '../assets/bg_main.svg';
+import heroImage from '../assets/bg_main.png';
 import styles from '../styles/Header.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebook, faInstagram, faLinkedin, faBehance } from '@fortawesome/free-brands-svg-icons';
@@ -21,7 +21,7 @@ const Header = () => {
           <div className={`${styles.marker} fade-in`}>
             <img src={marker} alt="marker img" />
           </div>
-          <p className={`${styles.role} fade-in`}>Front-End Developer and React Developer</p>
+          <p className={`${styles.role} fade-in`}>Front-End Developer & React Developer</p>
           <div className={`${styles.social_icons} fade-in`}>
             <a href="https://www.linkedin.com/in/prabin-raj-prabin" target="_blank" rel="noopener noreferrer"> 
               <FontAwesomeIcon icon={faLinkedin} />
