@@ -13,25 +13,19 @@ import image8 from "../assets/p8.png";
 
 const projects = [
   {
-    id: 1,
-    title: "🌐 Web Page",
-    subtitle: "HTML5 & CSS3",
-    image: image1,
+    id: 8,
+    title: "PORTFOLIO",
+    subtitle: "React.js, Javascript, Firebase and Github",
+    image: image7,
     description:
-      "A responsive personal portfolio webpage created using HTML5 and CSS3. The layout automatically adapts to different screen sizes, offering a seamless browsing experience on mobile, tablet, and desktop devices. The design emphasizes simplicity, readability, and smooth user interaction.",
-    link: "https://prabin-karka.github.io/my-website/", 
+      `Built using React.js, GitHub, Firebase, and Axios, this portfolio project demonstrates a modern, responsive, and fully functional web application.
+      “View Live Project”
+“Open Project”
+“See It in Action”`,
+    link: "https://prabin-karka.github.io/my_portfolio", 
   },
   {
-    id: 2,
-    title: "FRONT-END FRAMEWORK",
-    subtitle: "Bootstrap5",
-    image: image2,
-    description:
-      "Used Bootstrap, a modern front-end framework, to design a fully responsive and elegant user interface with minimal effort.",
-    link: "https://prabin-karka.github.io/my-website/bootstrap.html", 
-  },
-  {
-    id: 3,
+    id: 7,
     title: "🍔FOOD WEBSITE",
     subtitle: "HTML5, CSS3, JS in React.js",
     image: image3,
@@ -40,7 +34,7 @@ const projects = [
     link: "https://prabin-karka.github.io/feane/",
   },
   {
-    id: 4,
+    id: 6,
     title: "TO-DO-LIST",
     subtitle: "Javascript & React.js",
     image: image4,
@@ -52,6 +46,34 @@ The project demonstrates component-based architecture, state management using Re
   },
   {
     id: 5,
+    title: "🌐 Web Page",
+    subtitle: "HTML5 & CSS3",
+    image: image1,
+    description:
+      "A responsive personal portfolio webpage created using HTML5 and CSS3. The layout automatically adapts to different screen sizes, offering a seamless browsing experience on mobile, tablet, and desktop devices. The design emphasizes simplicity, readability, and smooth user interaction.",
+    link: "https://prabin-karka.github.io/my-website/", 
+  },
+  {
+    id: 4,
+    title: "FRONT-END FRAMEWORK",
+    subtitle: "Bootstrap5",
+    image: image2,
+    description:
+      "Used Bootstrap, a modern front-end framework, to design a fully responsive and elegant user interface with minimal effort.",
+    link: "https://prabin-karka.github.io/my-website/bootstrap.html", 
+  },
+  {
+    id: 3,
+    title: "AUTHENTICATION",
+    subtitle: "Javascript- Local Storage",
+    image: image6,
+    description:
+      `AUTHENTICATION:
+  Login validation using JavaScript if/else statements – secure and interactive user access.`,
+    link: "https://todolist-tod.web.app/", 
+  },
+  {
+    id: 2,
     title: "🖼️PHOTO EDITING",
     subtitle: "Adobe Photoshop",
     image: image5,
@@ -60,38 +82,17 @@ The project demonstrates component-based architecture, state management using Re
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/hd/faca7059896081.5a32f4cacc280.jpg", 
   },
   {
-    id: 6,
+    id: 1,
     title: "OLD PORTFOLIO",
     subtitle: "Material UI, React & Vercel",
     image: image8,
     description:
-      `This is a modern personal portfolio website built using React and Material-UI. 
+      `(This portfolio is only made for laptop or desktop users and not responsive for smaller devices)This is a modern personal portfolio website built using React and Material-UI. 
 It showcases projects, skills, and contact information with a clean and interactive UI. 
 The project leverages Material-UI components for responsive layouts, theming, and professional styling, demonstrating modular React architecture and reusable components and also used versel for deployment.`,
     link: "https://old-portfolio-dun.vercel.app/", 
   },
-  {
-    id: 7,
-    title: "WEB DEVELOPMENT",
-    subtitle: " ",
-    image: image7,
-    description:
-      `Built using React.js, GitHub, Firebase, and Axios, this portfolio project demonstrates a modern, responsive, and fully functional web application.
-      “View Live Project”
-“Open Project”
-“See It in Action”`,
-    link: "https://prabin-karka.github.io/my_portfolio", 
-  },
-  {
-    id: 8,
-    title: "AUTHENTICATION",
-    subtitle: "Javascript- Local Storage",
-    image: image6,
-    description:
-      `AUTHENTICATION:
-Login validation using JavaScript if/else statements – secure and interactive user access.`,
-    link: "https://todolist-tod.web.app/", 
-  },
+  
 ];
 
 const Portfolio = () => {

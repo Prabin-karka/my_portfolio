@@ -53,6 +53,23 @@
     font-weight: 600;
     font-size: 14px;
   }
+
+  .skill-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-icon {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+.skill-icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+
   
 /* Container */
 .progress-bar {
