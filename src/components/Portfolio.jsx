@@ -23,7 +23,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "WEB DEVELOPMENT",
+    title: "WEB DESIGN",
     subtitle: "GitHub.com",
     image: image2,
     description:
@@ -32,7 +32,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "AUDIO MIXING",
+    title: "WEB DESIGN",
     subtitle: "Soundcloud.com",
     image: image3,
     description:
@@ -68,8 +68,8 @@ const projects = [
   },
   {
     id: 7,
-    title: "APP DESIGN",
-    subtitle: "Flutter",
+    title: "WEB DEVELOPMENT",
+    subtitle: "REACT.JS",
     image: image7,
     description:
       "A mobile app design prototype created using Flutter, focusing on intuitive user experiences.",
