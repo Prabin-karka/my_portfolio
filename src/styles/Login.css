@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
@@ -106,7 +106,7 @@
   background: none;
   border: none;
   background-color: #fcb620;
-  /* color: #cddb34; */
+ 
   font-weight: 600;
   cursor: pointer;
   font-size: 1rem;
@@ -115,9 +115,9 @@
 
 .signup-button:hover {
   text-decoration: underline;
-}
+} */
 /* Add to Login.css */
-.login-header {
+/* .login-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -142,4 +142,4 @@
   outline: none;
   border-radius: 50%;
   box-shadow: 0 0 3px 3px rgb(255, 0, 0);
-}
+} */
