@@ -28,7 +28,7 @@ const projects = [
     image: image2,
     description:
       "Used Bootstrap, a modern front-end framework, to design a fully responsive and elegant user interface with minimal effort.",
-    link: "https://prabin-karka.github.io/my-website/", 
+    link: "https://prabin-karka.github.io/my-website/bootstrap.html", 
   },
   {
     id: 3,

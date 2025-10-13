@@ -41,7 +41,7 @@ const NavBar = () => {
         <Link to="about" smooth={true} duration={500} offset={-30}>About</Link>
         {/* <Link to="services" smooth={true} duration={500} offset={-30}>Services</Link> */}
         <Link to="myskill" smooth={true} duration={500} offset={-65}>Skills</Link>
-        <Link to="portfolio" smooth={true} duration={500} offset={-85}>Portfolio</Link>
+        <Link to="portfolio" smooth={true} duration={500} offset={-85}>Project</Link>
         <Link to="experience" smooth={true} duration={500} offset={-65}>Experience</Link>
         <Link to="contact" smooth={true} duration={500} offset={-50}>Contact</Link>
         {/* <button onClick={() => navigate("/login")} className="navlogin-button">
