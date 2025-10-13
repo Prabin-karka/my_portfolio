@@ -46,11 +46,11 @@ const projects = [
     image: image4,
     description:
       "A dynamic video editing showcase with smooth transitions and high-quality visuals for commercial use.",
-    link: "#", 
+    link: "https://prabin-karka.github.io/todo_list/", 
   },
   {
     id: 5,
-    title: "PHOTOGRAPHY",
+    title: "PHOTO Editing",
     subtitle: "Adobe Photoshop",
     image: image5,
     description:
@@ -59,12 +59,12 @@ const projects = [
   },
   {
     id: 6,
-    title: "APP DEVELOPMENT",
-    subtitle: "Android",
-    image: image6,
+    title: "REACT & Vercel",
+    subtitle: "Old Portfolio",
+    image: image8,
     description:
       "An Android app built using Kotlin with modern UI components and backend integration.",
-    link: "#", 
+    link: "https://old-portfolio-dun.vercel.app/", 
   },
   {
     id: 7,
@@ -77,12 +77,12 @@ const projects = [
   },
   {
     id: 8,
-    title: "APP DEVELOPMENT",
-    subtitle: "Flutter",
-    image: image8,
+    title: "Authentication",
+    subtitle: "ff",
+    image: image6,
     description:
       "A cross-platform app built using Flutter with Firebase backend and Material Design UI.",
-    link: "#", 
+    link: "https://todolist-tod.web.app/", 
   },
 ];
 
