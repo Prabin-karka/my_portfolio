@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="footer">
       <h2 class="na">Prabin Raj</h2>
 
-      <p>Web Designer & React Developer</p>
+      <p>Web Developer & React Developer</p>
 
       <div className="social-icons">
       <a href="https://www.linkedin.com/in/prabin-raj-prabin" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a>

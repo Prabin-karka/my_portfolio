@@ -14,74 +14,82 @@ import image8 from "../assets/p8.png";
 const projects = [
   {
     id: 1,
-    title: "WEB DESIGN",
-    subtitle: "Dribbble.com",
+    title: "🌐 Web Page",
+    subtitle: "HTML5 & CSS3",
     image: image1,
     description:
-      "A creative web design projecvdifhduyfydfihwoudfuw6dr7qwydiqgu for modern websites.dkngdfysudgsiudhiusgdfuysdfiwdfusgduydhwid",
+      "A responsive personal portfolio webpage created using HTML5 and CSS3. The layout automatically adapts to different screen sizes, offering a seamless browsing experience on mobile, tablet, and desktop devices. The design emphasizes simplicity, readability, and smooth user interaction.",
     link: "https://prabin-karka.github.io/my-website/", 
   },
   {
     id: 2,
-    title: "WEB DESIGN",
-    subtitle: "GitHub.com",
+    title: "FRONT-END FRAMEWORK",
+    subtitle: "Bootstrap5",
     image: image2,
     description:
-      "A responsive and fully functional website built using HTML, CSS, and JavaScript with React integration.",
+      "Used Bootstrap, a modern front-end framework, to design a fully responsive and elegant user interface with minimal effort.",
     link: "https://prabin-karka.github.io/my-website/", 
   },
   {
     id: 3,
-    title: "WEB DESIGN",
-    subtitle: "Soundcloud.com",
+    title: "🍔FOOD WEBSITE",
+    subtitle: "HTML5, CSS3, JS in React.js",
     image: image3,
     description:
-      "Professional audio mixing and mastering project showcasing balanced sound quality and clarity.",
+      "This is a frontend-only Food Website built as a React component using HTML5, CSS3, and JavaScript.The layout is fully responsive and visually engaging, showcasing menus and food items with interactive UI elements like buttons and hover effects. The modular React component structure makes it easy to reuse and extend.",
     link: "https://prabin-karka.github.io/feane/",
   },
   {
     id: 4,
-    title: "VIDEO EDITING",
-    subtitle: "Adobe After Effects",
+    title: "TO-DO-LIST",
+    subtitle: "Javascript & React.js",
     image: image4,
     description:
-      "A dynamic video editing showcase with smooth transitions and high-quality visuals for commercial use.",
+     `This is a dynamic To-Do List web application built using React and JavaScript. 
+It allows users to add, edit, delete, and mark tasks as completed, with a responsive and interactive interface. 
+The project demonstrates component-based architecture, state management using React hooks, and clean, reusable code for front-end functionality.` ,
     link: "https://prabin-karka.github.io/todo_list/", 
   },
   {
     id: 5,
-    title: "PHOTO Editing",
+    title: "🖼️PHOTO EDITING",
     subtitle: "Adobe Photoshop",
     image: image5,
     description:
-      "High-quality photography and post-processing project emphasizing light, contrast, and tone balance.",
-    link: "#", 
+      "Basic experience using Adobe Photoshop for image editing, retouching, and creating visually appealing graphics.",
+    link: "https://mir-s3-cdn-cf.behance.net/project_modules/hd/faca7059896081.5a32f4cacc280.jpg", 
   },
   {
     id: 6,
-    title: "REACT & Vercel",
-    subtitle: "Old Portfolio",
+    title: "OLD PORTFOLIO",
+    subtitle: "Material UI, React & Vercel",
     image: image8,
     description:
-      "An Android app built using Kotlin with modern UI components and backend integration.",
+      `This is a modern personal portfolio website built using React and Material-UI. 
+It showcases projects, skills, and contact information with a clean and interactive UI. 
+The project leverages Material-UI components for responsive layouts, theming, and professional styling, demonstrating modular React architecture and reusable components and also used versel for deployment.`,
     link: "https://old-portfolio-dun.vercel.app/", 
   },
   {
     id: 7,
     title: "WEB DEVELOPMENT",
-    subtitle: "REACT.JS",
+    subtitle: " ",
     image: image7,
     description:
-      "A mobile app design prototype created using Flutter, focusing on intuitive user experiences.",
+      `Built using React.js, GitHub, Firebase, and Axios, this portfolio project demonstrates a modern, responsive, and fully functional web application.
+      “View Live Project”
+“Open Project”
+“See It in Action”`,
     link: "https://prabin-karka.github.io/my_portfolio", 
   },
   {
     id: 8,
-    title: "Authentication",
-    subtitle: "ff",
+    title: "AUTHENTICATION",
+    subtitle: "Javascript- Local Storage",
     image: image6,
     description:
-      "A cross-platform app built using Flutter with Firebase backend and Material Design UI.",
+      `AUTHENTICATION:
+Login validation using JavaScript if/else statements – secure and interactive user access.`,
     link: "https://todolist-tod.web.app/", 
   },
 ];
