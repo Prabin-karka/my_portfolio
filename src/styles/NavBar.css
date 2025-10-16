@@ -41,9 +41,15 @@
   margin-left: 0;
 }
 
+ /* .nav-links {
+  display: flex;
+  gap: 1.5rem;
+} */
+ /* smooth animation */
  .nav-links {
   display: flex;
   gap: 1.5rem;
+  transition: all 0.3s ease-in-out;
 }
   .nav-links a {
     text-decoration: none;
@@ -69,7 +75,7 @@
   background-color: #111;
   margin: 4px 0;
 }
-
+/* 
   .navlogin-button {
   background-color: #919191; 
   color: white;
@@ -82,24 +88,105 @@
   display: flex;
   align-items: center;
   gap: 8px;
-}
+} */
 
-.navlogin-button:hover {
+/* .navlogin-button:hover {
   background-color: #c3c2c1; 
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
+} */
 
-.navlogin-button:active {
-  transform: scale(0.95); /* Slight press-down effect */
-}
+/* .navlogin-button:active {
+  transform: scale(0.95);
+   Slight press-down effect
+} */
 .hamlogin{
   display: none;
 }
   
  /* MOBILE */
 @media (max-width: 768px) {
+.navbar {
+    padding: 0 10px;
+  }
 
-  .navbar{
+  .nav-links {
+    display: flex;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color:  #e6e7e8;
+    padding: 1rem 0;
+    gap: 1rem;
+    text-align: center;
+    z-index: 999;
+
+    /* 👇 Animation properties */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+  }
+
+  /* 👇 When menu is open */
+  .nav-links.show {
+    max-height: 400px; /* enough space for all items */
+    opacity: 1;
+    transform: translateY(0);
+  }
+ .navbar.scrolled .nav-links{
+    background-color: white; /* same color you use normally */
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #111;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+
+  /* Optional: Add a simple X animation when open */
+  .nav-links.show ~ .hamburger div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .nav-links.show ~ .hamburger div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-links.show ~ .hamburger div:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  /* .navlogin-button {
+    display: flex;
+    background-color: #f6f4f4;
+    color: rgb(94, 94, 94);
+    border: none;
+    padding: 5px 5px;
+    border-radius: 0%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  } */
+
+  .hamlogin {
+    display: flex;
+    color: #454444;
+  }
+
+  /* .navbar{
     padding: 0 10px;
   }
   .nav-links {
@@ -141,7 +228,7 @@
   .hamlogin{
   display: flex;
   color: #454444;
-}
+} */
 
 }
   
