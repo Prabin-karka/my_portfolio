@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/ScrollToTopButton.css"; // Import the CSS
+import { TiArrowUpThick } from "react-icons/ti";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,7 +26,7 @@ const ScrollToTopButton = () => {
       className={`scroll-to-top ${isVisible ? "show" : ""}`}
       onClick={scrollToTop}
     >
-      &#129033;
+      <TiArrowUpThick />
     </button>
   );
 };
