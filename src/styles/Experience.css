@@ -23,6 +23,7 @@
     font-size: 2rem;
     margin-bottom: 0.5rem;
     position: relative;
+    color: var(--nav-text);
   }
    .marker {
   width: 100%;              /* Take full width */
@@ -43,16 +44,16 @@
   }
   
   .experience-card {
-    background: #fff;
+    background: var(--bg1);
     border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow:var(--card-shadow);
     overflow: hidden;
     display: flex;
     flex-direction: column;
   }
   
   .experience-card-top {
-    background-color: #f3f4f6;
+    background-color: var(--card-top);
     padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -65,21 +66,25 @@
   }
   
   .experience-company {
-    color: #888;
+    
     font-size: 0.90rem;
     margin-top: 0.25rem;
+  }
+  .experience-company , .experience-company span{
+color: var(--skill-grid);
   }
   
   .experience-card-bottom {
     padding: 1rem 1.5rem;
     font-size: 1rem;
-    color: #333;
+    
   }
   
   .experience-card-bottom p {
     margin-top: 0.5rem;
     font-size: 16px;
     line-height: 1.5;
+    color: var(--icons1);
   }
 
   

@@ -10,14 +10,15 @@
   .footer {
     text-align: center;
     padding: 4rem 1rem;
-    background-color: #f5f7fa;
-    color: #333;
+    background-color: var(--bg1);
+    /* color: var(--icons1); */
     font-family: Arial, sans-serif;
   }
   
   .footer h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    color: var(--nav-text);
   }
  .na {
   font-family: 'Pacifico', cursive;
@@ -25,7 +26,6 @@
   font-weight: 700;
   position: relative;
   display: inline-block;
-  color: #111;
 }
 
 .na::after {
@@ -35,7 +35,7 @@
   height: 3px;
   left: 0;
   bottom: -5px;
-  background-color: #edd25c;
+  background-color: var(--name-after);
   transition: 0.3s;
 }
 
@@ -47,6 +47,7 @@
   .footer p {
     margin: 01.5rem 0;
     font-size: 1rem;
+    color: var(--notes);
   }
   
   .social-icons {
@@ -58,20 +59,20 @@
   }
   
   .social-icons a {
-    color: #333;
+    color: var(--icons1);
     font-size: 1.4rem;
     text-decoration: none;
     transition: color 0.3s ease;
   }
   
   .social-icons a:hover {
-    color: #636262;
+    color: var(--icons1-hover);
   }
   
   .footer-note,
   .footer-design {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--notes);
   }
   
  

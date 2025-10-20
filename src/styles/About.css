@@ -9,7 +9,7 @@
 }
 .about-section {
   padding: 4rem 2rem;
-  background-color: #fff;
+  background-color: var(--bg2);
 }
 
 .about-content {
@@ -31,7 +31,7 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #111827;
+  color:var(--nav-text);
 }
 
 
@@ -40,19 +40,22 @@
   font-size: 18px;
   line-height: 1.7;
   margin-bottom: 1.5rem;
-  color: #374151;
+  color: var(--about-text);
 }
 
 .info-list p {
   margin-bottom: 0.8rem;
   font-size: 1rem;
-  color: #1f2937;
+  color:var(--about-strong);
+}
+.info-list span {
+  color: var(--about-span);
 }
 
 .info-list strong {
   width: 100px;
   display: inline-block;
-  color: #6b7280;
+  color: var(--about-strong);
 }
 
 .about-image {
@@ -61,7 +64,7 @@
   justify-content: center;
   align-items: center;
   min-width: 100px; /* reduce from 150px */
-  max-width: 450px; /* optional */
+  max-width: 400px; /* optional */
 }
 
 
@@ -95,7 +98,7 @@
   left: 0;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid #111111;
+  border-right: 2px solid var(--nav-text);
   width: 0;
   opacity: 0;
 }
@@ -103,13 +106,13 @@
 .text-one {
   padding-top: 6px;
   animation: typing1 7s steps(11) infinite;
-  color:#f59e0b;
+  color:var(--typing-text1);
 }
 
 .text-two {
   padding-top: 6px;
   animation: typing2 7s steps(17) infinite;
-  color: #ef4444;
+  color: var(--typing-text2);
 }
 
 @keyframes typing1 {

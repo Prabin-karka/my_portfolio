@@ -1,13 +1,130 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  /* primary palette (default / light) */
+  /* navbar */
+  --bg1: #e6e7e8;
+  --bg2: white;
+  --bg2-opposite:black;
+  --nav-text: #111827;
+  --nav-text-hover: #6366f1;
+  --nav-scrolled:rgba(255, 255, 255, 0.5);
+
+  /* header */
+  --greeting: #6b7280;
+  --accent1: #ff7e5f;
+  --accent2: #feb47b;
+  --role: #374151;
+  --btn1: #facc15;
+  --btn1-hover: #fada58;
+  --icons1: #333;
+  --icons1-hover: #636262;
+  --wave-img: url("./assets/wave2.png");
+
+  /* About  */
+  --about-text: #374151;
+  --about-strong: #6b7280;
+  --about-span: #3549a3;
+  --typing-text1: #f59e0b;
+  --typing-text2: #ef4444;
+
+  /* skills */
+  --skill-grid: #f4f6f8;
+  --progressBar: #e0e0e0;
+
+  /* experience */
+  --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --card-top: #f3f4f6;
+
+  /* contact */
+  --bg3: #f5f7fa;
+
+  /* portfolio */
+  --project-overlay: rgba(255, 255, 255, 0.8);
+  --project-span:rgb(90, 92, 94);
+  --project-title:#444;
+  /* modal */
+  --modal-bg: rgba(0, 0, 0, 0.5);
+  --modal-subtile: #666;
+  --modal-description: #c5c3c3;
+  --modal-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+
+  /* footer */
+  --name-after: #edd25c;
+  --notes: #666;
+  
+  /* scrollbutton */
+  --scroll-btn:#333;
+  --scroll-btn-hover:#555;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
+[data-theme="dark"] {
+  /* navbar */
+  --bg1: #151515;
+  --bg2: black;
+  --bg2-opposite:white;
+  --nav-text: #ffffff;
+  --nav-text-hover: #6366f1;
+  --nav-scrolled:rgba(0, 0, 0, 0.5);
+
+
+  /* header */
+  --greeting: #b0bcd5;
+  --accent1: #ff7e5f;
+  --accent2: #feb47b;
+  --role: #accfe4;
+  --btn1: #facc15;
+  --btn1-hover: #fada58;
+  --icons1: #5ca2cd;
+  --icons1-hover: #c5e9ed;
+  --wave-img: url("./assets/wave1.png");
+
+  /* About  */
+  --about-text: #a0a6ae;
+  --about-strong: #e1e2e6;
+  --about-span: #85cfec;
+  --typing-text1: #f59e0b;
+  --typing-text2: #ef4444;
+
+  /* skills */
+  --skill-grid: #444546;
+  --progressBar: #e0e0e0;
+
+  /* experience */
+  --card-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
+  --card-top: #ffffff;
+
+  /* contact */
+    --bg3: #444547;
+
+  /* portfolio */
+  --project-overlay: rgba(255, 255, 255, 0.8);
+  --project-span:rgb(90, 92, 94);
+  --project-title:#444;
+  /* modal */
+  --modal-bg:rgba(0, 0, 0, 0.5);
+  --modal-subtile: #666;
+  --modal-description: #444;
+  --modal-shadow: 0 0 15px rgba(206, 201, 201, 0.3);
+
+
+  /* footer */
+  --name-after: #edd25c;
+  --notes: #cfcbcb;
+
+  /* scrollbutton */
+  --scroll-btn:#4d4c4c;
+  --scroll-btn-hover:#9b9b9b;
+}
+
+/* small utility so you can transition theme smoothly */
+:root,
+[data-theme="dark"] {
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* body uses bg and text */
+body {
+  background: var(--bg2);
+  /* color: var(--nav-text); */
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}

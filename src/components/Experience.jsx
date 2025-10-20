@@ -12,6 +12,8 @@ const experiences = [
     company: "Alo Info tech",
     Duration: "3 months",
     icon: reacticon,
+    description:`Worked on multiple web development projects with a strong focus on UI design and layout using HTML and CSS. Developed responsive and accessible front-end components in a React.js environment, collaborating closely with the team to implement design specifications and enhance overall user experience.
+    Encourage a broad and innovative perspective by promoting workplace diversity and empowering teams to drive meaningful change.`
   },
   // {
   //   title: "App Development",
@@ -53,10 +55,7 @@ const Experience = () => {
                     <img src={exp.icon} alt={`${exp.title} icon`} className="experience-icon-img" />
                   </div>
             <div className="experience-card-bottom">
-              <p>
-               Worked on multiple web development projects with a strong focus on UI design and layout using HTML and CSS. Developed responsive and accessible front-end components in a React.js environment, collaborating closely with the team to implement design specifications and enhance overall user experience.</p>
-              <p>
-               Encourage a broad and innovative perspective by promoting workplace diversity and empowering teams to drive meaningful change.</p>
+              <p>{exp.description}</p>
             </div>
           </div>
         ))}

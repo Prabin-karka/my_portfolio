@@ -12,10 +12,12 @@
 }
 
 .contact-title {
+  color: var(--nav-text);
   text-align: center;
   font-size: 2rem;
   margin-bottom: 0.5rem;
   position: relative;
+  
 }
 
   .marker {
@@ -48,7 +50,8 @@
 }
 
 .contact-form {
-  background-color: #f5f7fa;
+  background-color: var(--bg3 );
+  box-shadow: var(--card-shadow);
 }
 
 .contact-info {
@@ -59,6 +62,7 @@
   display: block;
   margin: 0.5rem 0 0.25rem;
   font-weight: bold;
+  color: var(--nav-text);
 }
 
 .contact-form input,
@@ -86,26 +90,32 @@
 
 
 .contact-form button {
-  background-color: #fdd835;
+  background-color: var(--btn1);
   border: none;
   padding: 0.75rem 2rem;
   border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
 }
-
+.contact-form button:hover {
+  background-color: var(--btn1-hover);
+  border: none;
+  
+}
 .contact-info h3 {
   font-weight: bold;
   margin-bottom: 1.5rem;
+  color: var(--nav-text);
 }
 
 .contact-info p {
   margin: 1rem 0;
   line-height: 2rem;
+  color: var(--nav-text);
 }
 
 .contact-info a {
-  color: #333;
+  color:var(--about-span);
   text-decoration: none;
   font-weight: bold;
 }

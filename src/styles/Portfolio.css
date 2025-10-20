@@ -19,6 +19,7 @@ html, body {
 .portfolio-title {
   font-size: 28px;
   font-weight: bold;
+  color: var(--nav-text);
 }
 
 
@@ -106,8 +107,7 @@ html, body {
 .portfolio-item .overlay {
   position: absolute;
   bottom: -100%; /* Start hidden below */
-  background: rgba(255, 255, 255, 0.8);
-  color: rgb(0, 0, 0);
+  background: var(--project-overlay);
   width: 100%;
   padding: 12px 15px;
   font-size: 16px;
@@ -120,8 +120,11 @@ html, body {
   bottom: 0; /* Moves up */
   opacity: 1;
 }
-span{
-  color: rgb(114, 114, 114);
+.overlay {
+  color: var(--project-title);
+}
+.overlay span{
+  color: var(--project-span);
 }
 /* === Modal Styling (Updated) === */
 .modal-overlay {
@@ -130,7 +133,7 @@ span{
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--modal-bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,7 +142,7 @@ span{
 }
 
 .modal-content {
-  background: #fff;
+  background: var(--bg1);
   max-width: 500px;
   width: 100%;
   border-radius: 10px;
@@ -150,8 +153,10 @@ span{
   max-height: 90vh; /* limit modal height to viewport */
   overflow-y: auto; /* only vertical scroll */
   overflow-x: hidden; /* prevent horizontal scroll */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  box-shadow:var(--modal-shadow);
+
 }
+
 
 
 /* Customize scrollbar (optional, looks cleaner) */
@@ -159,7 +164,7 @@ span{
   width: 6px;
 }
 .modal-content::-webkit-scrollbar-thumb {
-  background: #ccc;
+  background: #919191;
   border-radius: 4px;
 }
 
@@ -200,28 +205,31 @@ span{
 .modal-content h3 {
   font-size: 22px;
   margin-bottom: 10px;
+  color: var(--nav-text);
 }
 
 .modal-subtitle {
   font-weight: bold;
-  color: #666;
+  color: var(--modal-subtile);
   margin-bottom: 10px;
 }
 
 .modal-description {
   font-size: 15px;
-  color: #444;
+  /* color: var(--modal-description); */
   line-height: 1.5;
   text-align: justify; /* optional: looks cleaner for long text */
 }
-
+.modal-description {
+  color: var(--about-span);
+}
 /* Visit button */
 .visit-btn {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 18px;
-  background: linear-gradient(90deg, #ff7e5f, #feb47b);
-  color: white;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  color: var(--nav-text);
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;

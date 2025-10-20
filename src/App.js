@@ -1,33 +1,45 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
+import { ThemeProvider } from "./contexts/ThemeContext";
+// import Login from "./components/Login";
+// import Signup from "./components/Signup";
 
 function App() {
+  // Keep your IntersectionObserver logic
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
 
-  window.onload = function() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    }, { threshold: 0.3 });
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
 
-    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
-  };
+    // Cleanup on unmount
+    return () => observer.disconnect();
+  }, []);
 
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
-    </Router>
+  
+   return (
+    <ThemeProvider>  {/* 👈 wrap your entire app */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} /> */}
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
+
+  
 
 export default App;
 
