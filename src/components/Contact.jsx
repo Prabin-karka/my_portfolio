@@ -45,15 +45,12 @@
 
 
 
-
-
 import React, { useState } from 'react';
 import '../styles/Contact.css';
 import marker from '../assets/marker.svg';
 import axios from 'axios';
 
-const FIREBASE_DB_URL = process.env.REACT_APP_FIREBASE_DB_URL; // CRA
-// const FIREBASE_DB_URL = import.meta.env.VITE_FIREBASE_DB_URL; // Vite
+const FIREBASE_DB_URL = process.env.REACT_APP_FIREBASE_DB_URL;
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -63,25 +60,38 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
-  setLoading(true);
-  try {
-    // Add a timestamp to the feedback
-    await axios.post(`${FIREBASE_DB_URL}/contacts.json`, {
-      ...formData,
-      createdAt: Date.now(), // current time in milliseconds
-    });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    alert('Your message just made my day 😊 I’ll reply shortly.');
-    setFormData({ name: '', email: '', message: '' });
-  } catch (error) {
-    console.error('Error sending message:', error);
-    alert('Something went wrong😓. Try again!');
-  }
-  setLoading(false);
-};
+    // Validation
+    if (!formData.name || !formData.email || !formData.message) {
+      alert('Please fill all fields!');
+      return;
+    }
 
+    const emailRegex = /\S+@\S+\.\S+/;
+    if (!emailRegex.test(formData.email)) {
+      alert('Please enter a valid email!');
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      await axios.post(`${FIREBASE_DB_URL}/contacts.json`, {
+        ...formData,
+        createdAt: Date.now(), // timestamp
+      });
+
+      alert('Your message just made my day 😊 I’ll reply shortly.');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Something went wrong😓. Try again!');
+    }
+
+    setLoading(false);
+  };
 
   return (
     <section className="contact-section">
@@ -90,9 +100,7 @@ const Contact = () => {
         <img src={marker} alt="marker img" />
       </div>
       <div className="contact-wrapper">
-
         <div className="contact-container fade-in-scale">
-          {/* Keep HTML structure intact */}
           <div className="contact-form">
             <label>Name</label>
             <input
@@ -128,14 +136,21 @@ const Contact = () => {
           <div className="contact-info fade-in-scale">
             <h3>Drop Me a Message❤️</h3>
             <h3>Your message could spark something amazing. Don’t hesitate to reach out.</h3>
-            <p>(Your message means a lot! It’s safely stored and will reach me through Firebase, so I can read it and get back to you as soon as possible. Thank you for taking the time to connect — I truly appreciate it!)</p>
-           
+            <p>
+              (Your message means a lot! It’s safely stored and will reach me through Firebase, so I
+              can read it and get back to you as soon as possible. Thank you for taking the time to
+              connect — I truly appreciate it!)
+            </p>
 
-            <h3><strong>Email:</strong> <a href="mailto:r.rajaprabinraj@gmail.com">r.rajaprabinraj@gmail.com</a></h3>
-            <h3><strong>Phone:</strong> <a href="tel:+91-9487082294">+91 9487082294</a></h3>
+            <h3>
+              <strong>Email:</strong>{' '}
+              <a href="mailto:r.rajaprabinraj@gmail.com">r.rajaprabinraj@gmail.com</a>
+            </h3>
+            <h3>
+              <strong>Phone:</strong> <a href="tel:+91-9487082294">+91 9487082294</a>
+            </h3>
           </div>
         </div>
-
       </div>
     </section>
   );
