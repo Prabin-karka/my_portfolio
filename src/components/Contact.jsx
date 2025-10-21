@@ -44,16 +44,14 @@
 // export default Contact;
 
 
-
-import React, { useState } from 'react';
-import '../styles/Contact.css';
-import marker from '../assets/marker.svg';
-import axios from 'axios';
-
-const FIREBASE_DB_URL = process.env.REACT_APP_FIREBASE_DB_URL;
+import React, { useState } from "react";
+import "../styles/Contact.css";
+import marker from "../assets/marker.svg";
+import { ref, push, serverTimestamp } from "firebase/database";
+import { db } from "../firebase"; // make sure firebase.js is correctly set up
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -65,29 +63,30 @@ const Contact = () => {
 
     // Validation
     if (!formData.name || !formData.email || !formData.message) {
-      alert('Please fill all fields!');
+      alert("Please fill all fields!");
       return;
     }
 
     const emailRegex = /\S+@\S+\.\S+/;
     if (!emailRegex.test(formData.email)) {
-      alert('Please enter a valid email!');
+      alert("Please enter a valid email!");
       return;
     }
 
     setLoading(true);
 
     try {
-      await axios.post(`${FIREBASE_DB_URL}/contacts.json`, {
+      // ✅ Use Firebase push() with server timestamp
+      await push(ref(db, "contacts"), {
         ...formData,
-        createdAt: Date.now(), // timestamp
+        createdAt: serverTimestamp(), // Firebase server time
       });
 
-      alert('Your message just made my day 😊 I’ll reply shortly.');
-      setFormData({ name: '', email: '', message: '' });
+      alert("Your message just made my day 😊 I’ll reply shortly.");
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error('Error sending message:', error);
-      alert('Something went wrong😓. Try again!');
+      console.error("Error sending message:", error);
+      alert("Something went wrong😓. Try again!");
     }
 
     setLoading(false);
@@ -99,6 +98,7 @@ const Contact = () => {
       <div className="marker">
         <img src={marker} alt="marker img" />
       </div>
+
       <div className="contact-wrapper">
         <div className="contact-container fade-in-scale">
           <div className="contact-form">
@@ -129,12 +129,12 @@ const Contact = () => {
             ></textarea>
 
             <button type="submit" onClick={handleSubmit} disabled={loading}>
-              {loading ? 'Sending...' : 'Send'}
+              {loading ? "Sending..." : "Send"}
             </button>
           </div>
 
           <div className="contact-info fade-in-scale">
-            <h3>Drop Me a Message❤️</h3>
+            <h3>Drop Me a Message ❤️</h3>
             <h3>Your message could spark something amazing. Don’t hesitate to reach out.</h3>
             <p>
               (Your message means a lot! It’s safely stored and will reach me through Firebase, so I
@@ -143,11 +143,12 @@ const Contact = () => {
             </p>
 
             <h3>
-              <strong>Email:</strong>{' '}
+              <strong>Email:</strong>{" "}
               <a href="mailto:r.rajaprabinraj@gmail.com">r.rajaprabinraj@gmail.com</a>
             </h3>
             <h3>
-              <strong>Phone:</strong> <a href="tel:+91-9487082294">+91 9487082294</a>
+              <strong>Phone:</strong>{" "}
+              <a href="tel:+91-9487082294">+91 9487082294</a>
             </h3>
           </div>
         </div>
