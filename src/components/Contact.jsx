@@ -63,19 +63,25 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      await axios.post(`${FIREBASE_DB_URL}/contacts.json`, formData);
-      alert('Your message just made my day 😊 I’ll reply shortly.');
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      console.error('Error sending message:', error);
-      alert('Something went wrong😓. Try again!');
-    }
-    setLoading(false);
-  };
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+  try {
+    // Add a timestamp to the feedback
+    await axios.post(`${FIREBASE_DB_URL}/contacts.json`, {
+      ...formData,
+      createdAt: Date.now(), // current time in milliseconds
+    });
+
+    alert('Your message just made my day 😊 I’ll reply shortly.');
+    setFormData({ name: '', email: '', message: '' });
+  } catch (error) {
+    console.error('Error sending message:', error);
+    alert('Something went wrong😓. Try again!');
+  }
+  setLoading(false);
+};
+
 
   return (
     <section className="contact-section">
